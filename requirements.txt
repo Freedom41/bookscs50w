@@ -20,6 +20,7 @@ Flask-JWT-Extended==3.7.0
 Flask-Login==0.4.0
 Flask-Session==0.3.1
 Flask-SocketIO==4.2.1
+gunicorn==19.9.0
 idna==2.8
 ipykernel==5.1.2
 ipython==7.8.0
