@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrapmin.css') }}" type="text/css"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <title>
+            {% block title %} {% endblock %}
+        </title>
+    </head>
+    <body class="hero-container">
+    <div class="content-container">    
+        <nav class="navbar" style="background-color: #3C4035;">
+            <p> <a href="{{url_for('index')}}"> Home </a> </p>
+            {% if session['log'] %}
+            <p> <a href="{{url_for('userprofile')}}"> Search Page </a> </p>
+            <p> <a href="{{url_for('logout')}}"> Logout </a> </p>
+            {% else %}
+            <p> <a href="{{url_for('login')}}"> Login </a> </p>
+            <p> <a href="{{url_for('signup')}}"> Signup </a> </p>
+            {% endif %}
+        </nav>
+        {% block body %}
+        
+        {% endblock %}
+    </div>    
+        <footer class="footer" style="background-color: #3C4035;">
+         <p> Coded and Designed by Mark Mascarenhas </p>
+        </footer>
+    </body>
+    
+</html>

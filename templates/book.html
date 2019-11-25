@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+   Book title 
+{% endblock %}
+
+{% block body %}
+   <div class="container form text-center"> 
+      <h4> Isbn: {{ isbn }} </h4>
+      <h4> Publication Year: {{ year }} </h4>
+      <h4> Book Title: {{ title }} </h4>
+      <h4> Book Author: {{ author }} <h4>
+  </div>
+  
+  <div class="container form">
+    <form action={{ url_for('submitreview' , id=id ) }} method='POST'>
+      <label> Rating </label>
+      <input id="radio" type='radio' name=rating value="1">
+      <input id="radio" type='radio' name=rating value="2">
+      <input id="radio" type='radio' name=rating value="3">
+      <input id="radio" type='radio' name=rating value="4">
+      <input id="radio" type='radio' name=rating value="5">
+      <input id="review" type="text" placeholder="Type a rebiew" name="text">
+      <button class="button" type="submit"> <span> Submit </span> </button>
+    </form>
+  </div>
+   
+  <div class="main-container text-center" style="background:#3F4037">
+    {% for i in review %}
+    <div class="container form">
+    <p class="rating"> Rating: {{ i[3] }}  </p>
+    <p> by : {{ i[1] }}<p>
+    <p> {{ i[4] }} </p>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
