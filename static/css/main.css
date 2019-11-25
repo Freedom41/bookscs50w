@@ -1,16 +1,17 @@
-
 body {
-    font-size: 18px;
-    font-family: Garamond, cursive, serif;
+    font-size: 24px;
+    font-family: 'Risque' ,serif;
+   font-family: 'Caveat', cursive;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #3C4035;
 }
+
 .hero-container {
     display: flex;
     flex-direction: column; 
     background-color: #78806A;
-    font-family: Garamond,serif;
     color: white;
 }
 
@@ -25,19 +26,18 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    margin-top: 8em;
+    margin-top: 8rem;
 }
 
 .form {
     display: flex;
     flex-direction: column-reverse;
+    flex-wrap: wrap;
     background: #3C4035;
-    width: 40%;
     margin-top: 10rem;
     border: 4px solid #DDFFD1;
     border-radius: 25px; 
-    padding: 1rem;
-    
+    padding: 1rem;   
 }
 
 .sub-container {
@@ -49,7 +49,6 @@ body {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    font-family: cursive, serif;
     background: #3F4037;
     color: #FDFFDE;
     width: 100vw;
@@ -70,7 +69,7 @@ a:hover{
     color: inherit;
     border: 1px solid white;
     border-radius: 12px;
-    padding: 0.25em;
+    padding: 0.25rem;
     margin-top: 0.75rem; 
 }
 
