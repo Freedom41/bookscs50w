@@ -15,7 +15,7 @@ entrypoints==0.3
 Faker==0.8.13
 Flask==1.1.1
 Flask-Bcrypt==0.7.1
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 Flask-JWT-Extended==3.7.0
 Flask-Login==0.4.0
 Flask-Session==0.3.1
